@@ -1,3 +1,4 @@
+import { IRequest } from "itty-router"
 import ms, { StringValue } from "ms"
 
 import { ok, RequestInitExStatus } from "@worker-tools/response-creators"
@@ -31,7 +32,7 @@ export const json = <T = unknown>(data: T, init?: RequestInitExStatus) =>
         },
   )
 
-export const getCountry = (request: Request) => {
+export const getCountry = (request: IRequest) => {
   if (request.cf != null && "country" in request.cf) {
     return request.cf.country
   }

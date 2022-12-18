@@ -1,11 +1,12 @@
-import { IHTTPMethods, Router } from "itty-router"
+import { Router } from "itty-router"
 
 import { notFound, temporaryRedirect } from "@worker-tools/response-creators"
 
 import { notifier } from "./notify"
 import { v1Router } from "./routes/v1"
+import { CustomRouter } from "./types"
 
-const router = Router<Request, IHTTPMethods>()
+const router = Router() as CustomRouter
 
 router.all("/v1/*", v1Router.handle)
 
@@ -14,7 +15,7 @@ router.get("/", () => temporaryRedirect("https://github.com/BeeeQueue/dota-match
 router.all("*", () => notFound())
 
 const worker: ExportedHandler<Env> = {
-  fetch: router.handle,
+  fetch: router.handle as never,
   scheduled: notifier,
 }
 

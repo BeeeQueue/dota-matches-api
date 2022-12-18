@@ -50,8 +50,8 @@ devDependencies:
     specifier: 6.6.2
     version: 6.6.2
   itty-router:
-    specifier: 2.6.6
-    version: 2.6.6
+    specifier: 3.0.8
+    version: 3.0.8
   kysely:
     specifier: 0.22.0
     version: 0.22.0
@@ -3301,8 +3301,8 @@ packages:
       istanbul-lib-report: 3.0.0
     dev: true
 
-  /itty-router/2.6.6:
-    resolution: {integrity: sha512-hIPHtXGymCX7Lzb2I4G6JgZFE4QEEQwst9GORK7sMYUpJvLfy4yZJr95r04e8DzoAnj6HcxM2m4TbK+juu+18g==}
+  /itty-router/3.0.8:
+    resolution: {integrity: sha512-M9eRIGYljT6yAlCggF+CfTCFwtb02bFUjB8uaYYTiViAKB+SLhuWaYKabFA+IEvhkXqmslP6uZLCyWnJ2GIy1Q==}
     dev: true
 
   /joycon/3.1.1:

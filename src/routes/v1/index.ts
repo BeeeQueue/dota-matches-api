@@ -1,9 +1,10 @@
-import { IHTTPMethods, Router } from "itty-router"
+import { Router } from "itty-router"
 
 import { ExecutionContext } from "@cloudflare/workers-types"
 
 import { createDb } from "../../db"
 import { createDotaClient } from "../../dota"
+import { CustomRouter } from "../../types"
 import {
   buildCacheResponse,
   EDGE_CACHE_TIMEOUT,
@@ -16,12 +17,12 @@ import {
 
 import { discordRouter } from "./discord"
 
-export const v1Router = Router<Request, IHTTPMethods>({ base: "/v1" })
+export const v1Router = Router({ base: "/v1" }) as CustomRouter
 
 v1Router.all("/discord/*", discordRouter.handle)
 
-v1Router.get("/matches", async (request: Request, env: Env, ctx: ExecutionContext) => {
-  const cached = await caches.default.match(request)
+v1Router.get("/matches", async (request, env: Env, ctx: ExecutionContext) => {
+  const cached = await caches.default.match(request.url)
   if (cached != null) {
     const lastFetched = Number((await env.META.get(MetaKey.MATCHES_LAST_FETCHED))!)
 
@@ -43,7 +44,7 @@ v1Router.get("/matches", async (request: Request, env: Env, ctx: ExecutionContex
 
   ctx.waitUntil(
     caches.default
-      .put(request, buildCacheResponse(matches, lastFetched))
+      .put(request.url, buildCacheResponse(matches, lastFetched))
       .catch((error: Error) => console.log(`Failed to cache response: ${error.message}`)),
   )
 
