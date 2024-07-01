@@ -28,7 +28,7 @@
     "prepare": "simple-git-hooks"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "2.19.0",
+    "@antfu/eslint-config": "2.21.2",
     "@cloudflare/workers-types": "4.20240620.0",
     "@leeoniya/ufuzzy": "1.0.14",
     "@total-typescript/ts-reset": "0.5.1",
@@ -42,7 +42,7 @@
     "drizzle-orm": "0.31.2",
     "eslint": "8.57.0",
     "hono": "4.4.10",
-    "lint-staged": "15.2.5",
+    "lint-staged": "15.2.7",
     "mande": "2.0.9",
     "milli": "4.0.0",
     "miniflare": "3.20240620.0",
