@@ -49,8 +49,8 @@ importers:
         specifier: 0.37.91
         version: 0.37.91
       discord-interactions:
-        specifier: 3.4.0
-        version: 3.4.0
+        specifier: 4.0.0
+        version: 4.0.0
       dotenv:
         specifier: 16.4.5
         version: 16.4.5
@@ -1611,9 +1611,9 @@ packages:
   discord-api-types@0.37.91:
     resolution: {integrity: sha512-yPGOP1SlkRtnT9Vor5noZHNm7t+EpRdaDvEoeqWTSCzeenMWyB1RbOGKYxdZ1OZijji51Yd1yodhOTi9CfrrQg==}
 
-  discord-interactions@3.4.0:
-    resolution: {integrity: sha512-DG0Jxdd/FcK8liAPhIP4u5YHpnz50JWn9DK4OavxsLD49/WGimXtP3EdOY439MaWyCgQfsfFkA1GsTEyu63RzA==}
-    engines: {node: '>=12'}
+  discord-interactions@4.0.0:
+    resolution: {integrity: sha512-27HSJ379W9E4T6Or+efQRGnekJ6g8kYokSFtK5HKc/3ObC+83O+vxdg2trStD/2XPIHVPMNVIoZAeK9s/EL8Yg==}
+    engines: {node: '>=18.4.0'}
 
   doctrine@3.0.0:
     resolution: {integrity: sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==}
@@ -3089,9 +3089,6 @@ packages:
   tunnel-agent@0.6.0:
     resolution: {integrity: sha512-McnNiV1l8RYeY8tBgEpuodCC1mLUdbSN+CYBL7kJsJNInOP8UjDDEwdk6Mw60vdLLrr5NHKZhMAOSrR2NZuQ+w==}
 
-  tweetnacl@1.0.3:
-    resolution: {integrity: sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==}
-
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
@@ -4513,9 +4510,7 @@ snapshots:
 
   discord-api-types@0.37.91: {}
 
-  discord-interactions@3.4.0:
-    dependencies:
-      tweetnacl: 1.0.3
+  discord-interactions@4.0.0: {}
 
   doctrine@3.0.0:
     dependencies:
@@ -6085,8 +6080,6 @@ snapshots:
   tunnel-agent@0.6.0:
     dependencies:
       safe-buffer: 5.2.1
-
-  tweetnacl@1.0.3: {}
 
   type-check@0.4.0:
     dependencies:
